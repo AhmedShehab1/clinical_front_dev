@@ -1,6 +1,12 @@
 module.exports = {
-    "*.js": "eslint --fix",
-    "*.jsx": "eslint --fix",
-    "*.{json,css,md}": "prettier --write",
+    // Lint & format JavaScript files
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    // Format other file types
+    "*.{json,css,md}": [
+      "prettier --write"
+    ]
   };
   
