@@ -7,8 +7,7 @@ export default function Footer() {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(74, 127, 176, 0.98)", color: "White" }}
       >
-        © {new Date().getFullYear()} Copyright:
-        <div className="text-body ms-1">CopyRights reserved For GAMMA Team</div>
+        © {new Date().getFullYear()} GAMMA Team. All rights reserved.
       </div>
     </footer>
   );
