@@ -27,7 +27,7 @@ export default function Home() {
           </h1>
           <p>
             We set high standards of quality, research and transparency for what
-            we share, ensuringyou have access to nothing but the best.{" "}
+            we share, ensuring you have access to nothing but the best.{" "}
           </p>
         </div>
       </div>
