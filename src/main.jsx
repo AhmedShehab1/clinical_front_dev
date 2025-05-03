@@ -10,19 +10,23 @@ import {
 } from "react-router-dom";
 import About from "./Components/About/About.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
-import Home from "./Components/Home/Home.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
+import ApiProvider from "./contexts/ApiProvider.jsx";
+import RegistrationPage from "./pages/RegistrationPage.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "/About", element: <About /> },
   { path: "/Contact", element: <Contact /> },
   { path: "/login", element: <LoginPage /> },
-  { path: "/SignUp", element: <SignUp /> },
+  { path: "/signup", element: <RegistrationPage /> },
   { path: "*", element: <Navigate to="/" /> },
 ]);
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ApiProvider>
+      <RouterProvider router={router} />
+    </ApiProvider>
   </StrictMode>,
 );
