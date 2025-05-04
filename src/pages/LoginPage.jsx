@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import Container from "react-bootstrap/Container";
 import { Button, Form } from "react-bootstrap";
 import InputField from "../Components/InputField";
 import { Link } from "react-router-dom";
+import Body from "../Components/Body";
 
 export default function LoginPage() {
   const [formErrors, setFormErrors] = useState({});
@@ -33,7 +33,7 @@ export default function LoginPage() {
   };
 
   return (
-    <Container>
+    <Body>
       <h1>Login form</h1>
       <Form onSubmit={onSubmit}>
         <InputField
@@ -57,6 +57,6 @@ export default function LoginPage() {
       <p>
         Don&apos;t have an account? <Link to="/signup">Register here</Link>!
       </p>
-    </Container>
+    </Body>
   );
 }
