@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { useApi } from "../contexts/ApiProvider";
 import { useFlash } from "../contexts/FlashProvider";
 import InputField from "../Components/InputField";
+import Body from "../Components/Body";
+
 
 export default function RegistrationPage() {
   const [formErrors, setFormErrors] = useState({});
@@ -34,14 +36,14 @@ export default function RegistrationPage() {
         setFormErrors(data.body.errors.json);
       } else {
         setFormErrors({});
-        flash("You have successfully registered!", "success");
+        flash("You have successfully registered!", "success", 5);
         navigate("/login");
       }
     }
   };
 
   return (
-    <Container>
+    <Body>
       <h1>Register</h1>
       <Form onSubmit={onSubmit}>
         <InputField
@@ -74,6 +76,6 @@ export default function RegistrationPage() {
           Register
         </Button>
       </Form>
-    </Container>
+    </Body>
   );
 }
