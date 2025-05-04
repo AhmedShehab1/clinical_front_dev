@@ -1,0 +1,39 @@
+.navbar {
+  background-color: rgba(42, 94, 146, 0.96);
+  font-size: 18px;
+  font-weight: 500;
+}
+button {
+  border-radius: 20px !important;
+  background-color: #29a9ff !important;
+  color: White !important;
+}
+ul li {
+  position: relative;
+  transition: all 2s ease;
+  margin: 0 !important;
+  color: white;
+}
+ul li:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: white;
+  bottom: 1px;
+  left: 0;
+  transition: width 0.5s ease;
+}
+ul li:hover::after {
+  width: 100%;
+}
+.logoname {
+  color: white;
+  font-size: 30px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+}
+form a:hover {
+  color: rgb(23, 93, 190) !important;
+  background-color: white;
+}

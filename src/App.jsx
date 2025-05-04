@@ -7,13 +7,9 @@ import Footer from "./Components/Footer/Footer";
 export default function App() {
   return (
     <Container fluid className="App">
-      <h1>Clinical System</h1>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="*" element={<Navigate to="/" />} />
-        </Routes>
-      </BrowserRouter>
+      <Navbar />
+      <Home />
+      <Footer />
     </Container>
   );
 }

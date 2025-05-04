@@ -13,7 +13,8 @@ import LoginPage from "./pages/LoginPage.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
 import ApiProvider from "./contexts/ApiProvider.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
-import PatientProfile from "./Components/PatientProfile/PatientProfile.jsx";
+
+import PatientProfile from "./Components/PatientProfile/PatientProfile.jsx"
 import FlashProvider from "./contexts/FlashProvider.jsx";
 
 const router = createBrowserRouter([

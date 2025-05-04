@@ -6,6 +6,7 @@ import { useFlash } from "../contexts/FlashProvider";
 import InputField from "../Components/InputField";
 import Body from "../Components/Body";
 
+
 export default function RegistrationPage() {
   const [formErrors, setFormErrors] = useState({});
   const usernameField = useRef();
