@@ -14,6 +14,7 @@ import Contact from "./Components/Contact/Contact.jsx";
 import ApiProvider from "./contexts/ApiProvider.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
 import FlashProvider from "./contexts/FlashProvider.jsx";
+import UserProvider from "./contexts/UserProvider.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -28,7 +29,9 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <FlashProvider>
       <ApiProvider>
-        <RouterProvider router={router} />
+        <UserProvider>
+          <RouterProvider router={router} />
+        </UserProvider>
       </ApiProvider>
     </FlashProvider>
   </StrictMode>,

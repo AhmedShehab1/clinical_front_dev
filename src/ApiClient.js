@@ -76,4 +76,8 @@ export default class ApiClient {
     await this.delete("/tokens");
     localStorage.removeItem("accessToken");
   }
+
+  isAuthenticated() {
+    return localStorage.getItem("accessToken") !== null;
+  }
 }
