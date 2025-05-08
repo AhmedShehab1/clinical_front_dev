@@ -6,6 +6,20 @@ export default class ApiClient {
   }
 
   async request(options) {
+    let response = await this.requestInternal(options);
+    if (response.status_code === 401 && options.url !== "/tokens") {
+      const refreshResponse = await this.put("/tokens", {
+        access_token: localStorage.getItem("accessToken"),
+      });
+      if (refreshResponse.ok) {
+        localStorage.setItem("accessToken", refreshResponse.body.access_token);
+        response = await this.requestInternal(options);
+      }
+    }
+    return response;
+  }
+
+  async requestInternal(options) {
     let query = new URLSearchParams(options.query || {}).toString();
     if (query !== "") {
       query = "?" + query;
@@ -20,9 +34,10 @@ export default class ApiClient {
           Authorization: "Bearer " + localStorage.getItem("accessToken"),
           ...options.headers,
         },
+        credentials: options.url === "/tokens" ? "include" : "omit",
         body: options.body ? JSON.stringify(options.body) : null,
       });
-    } catch (error) {
+    } catch (err) {
       response = {
         ok: false,
         status: 500,
@@ -30,12 +45,11 @@ export default class ApiClient {
           return {
             code: 500,
             message: "The server is unresponsive",
-            description: error.toString(),
+            descriptions: err.toString(),
           };
         },
       };
     }
-
     return {
       ok: response.ok,
       status: response.status,
