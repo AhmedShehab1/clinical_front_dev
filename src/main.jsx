@@ -13,6 +13,7 @@ import LoginPage from "./pages/LoginPage.jsx";
 import Contact from "./Components/Contact/Contact.jsx";
 import ApiProvider from "./contexts/ApiProvider.jsx";
 import RegistrationPage from "./pages/RegistrationPage.jsx";
+
 import FlashProvider from "./contexts/FlashProvider.jsx";
 import UserProvider from "./contexts/UserProvider.jsx";
 import PrivateRoute from "./Components/PrivateRoute.jsx";
