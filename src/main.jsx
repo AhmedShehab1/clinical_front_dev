@@ -19,6 +19,7 @@ import UserProvider from "./contexts/UserProvider.jsx";
 import PrivateRoute from "./Components/PrivateRoute.jsx";
 import PublicRoute from "./Components/PublicRoute.jsx";
 import PatientProfile from "./Components/PatientProfile/PatientProfile.jsx";
+import AdminDashboard from "./pages/AdminDashboard/AdminDashboard.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -29,6 +30,14 @@ const router = createBrowserRouter([
     element: (
       <PublicRoute>
         <LoginPage />
+      </PublicRoute>
+    ),
+  },
+  {
+    path: "/admin-dashboard",
+    element: (
+      <PublicRoute>
+        <AdminDashboard />
       </PublicRoute>
     ),
   },
