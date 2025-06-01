@@ -1,0 +1,307 @@
+/* AdminDashboard.css */
+
+/* Main Layout */
+.dashboard-container {
+  background-color: #f8f9fc;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.back-button {
+  color: #4373e0;
+  font-weight: 500;
+  padding-left: 0;
+  font-size: 0.95rem;
+}
+
+.time-btn {
+  border-radius: 4px;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.5rem;
+}
+
+.dashboard-title h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.date-range {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Metric Cards */
+.dashboard-metrics {
+  margin-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.metric-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.metric-title {
+  color: #718096;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.metric-change {
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.positive {
+  color: #38a169;
+}
+
+.negative {
+  color: #e53e3e;
+}
+
+.vs-text {
+  color: #a0aec0;
+  font-weight: normal;
+  margin-left: 5px;
+}
+
+.metric-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.patients {
+  background-color: rgba(67, 115, 224, 0.1);
+  color: #4373e0;
+}
+
+.bed {
+  background-color: rgba(123, 97, 255, 0.1);
+  color: #7b61ff;
+}
+
+.stay {
+  background-color: rgba(56, 161, 105, 0.1);
+  color: #38a169;
+}
+
+.revenue {
+  background-color: rgba(56, 161, 105, 0.1);
+  color: #38a169;
+}
+
+/* Chart Cards */
+.dashboard-charts {
+  margin-bottom: 24px;
+}
+
+.chart-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 24px;
+  height: 100%;
+}
+
+.chart-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  position: relative;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.outpatients .legend-dot {
+  background-color: #2f80ed;
+}
+.inpatients .legend-dot {
+  background-color: #7b61ff;
+}
+.emergency .legend-dot {
+  background-color: #f8697f;
+}
+.patients .legend-dot {
+  background-color: #3182ce;
+}
+.revenue .legend-dot {
+  background-color: #38a169;
+}
+.satisfaction .legend-dot {
+  background-color: #805ad5;
+}
+.doctors .legend-dot {
+  background-color: #7b61ff;
+}
+.nursing .legend-dot {
+  background-color: #2f80ed;
+}
+.admin .legend-dot {
+  background-color: #38a169;
+}
+
+.staff-chart-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.efficiency-label {
+  color: #718096;
+  font-size: 0.85rem;
+  margin-top: 10px;
+}
+
+/* Alerts */
+.alerts-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.alerts-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 20px;
+}
+
+.alerts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.alert-item {
+  display: flex;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.alert-item.warning {
+  border-left: 4px solid #ecc94b;
+}
+
+.alert-item.success {
+  border-left: 4px solid #48bb78;
+}
+
+.alert-item.info {
+  border-left: 4px solid #4299e1;
+}
+
+.alert-icon {
+  font-size: 1.25rem;
+  margin-right: 15px;
+}
+
+.alert-icon.warning {
+  color: #ecc94b;
+}
+
+.alert-icon.success {
+  color: #48bb78;
+}
+
+.alert-icon.info {
+  color: #4299e1;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-message {
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 5px;
+}
+
+.alert-time {
+  color: #a0aec0;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: right;
+  padding: 15px 0;
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.edit-brand {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-metrics .col-md-3 {
+    margin-bottom: 15px;
+  }
+
+  .chart-legend {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .legend-item {
+    margin-bottom: 5px;
+  }
+}

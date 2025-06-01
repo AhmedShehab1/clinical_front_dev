@@ -6,10 +6,10 @@ import Footer from "./Components/Footer/Footer";
 
 export default function App() {
   return (
-    <Container fluid className="App">
+    <>
       <Navbar />
       <Home />
       <Footer />
-    </Container>
+    </>
   );
 }

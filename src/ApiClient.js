@@ -2,7 +2,7 @@ const BASE_API_URL = import.meta.env.VITE_API_URL;
 
 export default class ApiClient {
   constructor() {
-    this.base_url = BASE_API_URL + "/api";
+    this.base_url = BASE_API_URL + "/api/v1";
   }
 
   async request(options) {
