@@ -20,6 +20,9 @@ import PrivateRoute from "./Components/PrivateRoute.jsx";
 import PublicRoute from "./Components/PublicRoute.jsx";
 import PatientProfile from "./Components/PatientProfile/PatientProfile.jsx";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard.jsx";
+import ResetPage from "./pages/ResetPage.jsx";
+import ChangePasswordPage from "./pages/ChangePassword.jsx";
+import ResetRequestPage from "./pages/ResetRequestPage.jsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -31,6 +34,30 @@ const router = createBrowserRouter([
       <PublicRoute>
         <LoginPage />
       </PublicRoute>
+    ),
+  },
+  {
+    path: "/reset-request",
+    element: (
+      <PublicRoute>
+        <ResetRequestPage />
+      </PublicRoute>
+    ),
+  },
+  {
+    path: "/reset",
+    element: (
+      <PublicRoute>
+        <ResetPage />
+      </PublicRoute>
+    ),
+  },
+  {
+    path: "/password",
+    element: (
+      <PrivateRoute>
+        <ChangePasswordPage />
+      </PrivateRoute>
     ),
   },
   {
